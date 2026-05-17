@@ -34,11 +34,28 @@
         font-size: 21px;
         gap: var(--space-sm);
         z-index: 2;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-dark);
+
+            .location__icon {
+                background-color: var(--color-dark);
+            }
+
+            .location__text {
+                background-color: var(--color-gold);
+            }
+        }
     }
     
     &__icon {
+        display: grid;
+        place-items: center;
         background-color: var(--color-gold);
         padding: 2rem 1.8rem;
+        transition: background-color 0.2 ease-in-out;
 
         img {
             transform: rotate(180deg);

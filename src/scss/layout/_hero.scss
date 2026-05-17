@@ -38,6 +38,16 @@
         font-family: var(--font-heading);
         text-transform: uppercase;
         letter-spacing: 5px;
+        transition: background-color 0.15 ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-gold);
+
+            .hero__button-icon {
+                background-color: var(--color-dark);
+            }
+        }
     }
 
     &__button-text {
@@ -50,6 +60,7 @@
         place-items: center;
         background-color: var(--color-gold);
         padding: 2rem 1.5rem;
+        transition: background-color 0.15s ease-in-out;
     }
 
     @include tablet {
