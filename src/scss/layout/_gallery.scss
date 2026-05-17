@@ -1,0 +1,135 @@
+@use "../abstracts" as *;
+
+.gallery {
+    padding: 0 var(--space-sm);
+    margin-bottom: var(--space-2xl);
+
+    &__img-1,
+    &__img-2,
+    &__img-3 {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        display: grid;
+        gap: var(--space-sm);
+    }
+
+    &__intro {
+    display: grid;
+    gap: var(--space-sm);
+    }
+
+    &__title {
+    width: min(100%, 350px);
+    font-size: 50px;
+    line-height: 0.95;
+    }
+
+  &__text {
+    color: var(--color-gray);
+    line-height: 1.6;
+    font-size: 21px;
+  }
+
+  &__comment {
+    display: grid;
+    gap: var(--space-sm);
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  &__subtitle {
+    font-size: 46px;
+    line-height: 0.9;
+  }
+
+  &__text-2 {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  @include tablet {
+    padding: 0 35px;
+
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 0.45fr 1fr;
+      grid-template-rows: 400px 313px 396px;
+      grid-template-areas: 
+        "intro img1 img1"
+        "img2 img2 img3"
+        "img2 img2 comment";
+      gap: 11px;
+    }
+
+    &__intro {
+      grid-area: intro;
+      align-self: center;
+      padding-right: var(--space-md);
+    }
+
+    &__img-1 {
+      grid-area: img1;
+    }
+    
+    &__img-2 {
+      grid-area: img2;
+    }
+    
+    &__img-3 {
+      grid-area: img3;
+    }
+
+    &__comment {
+      grid-area: comment;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    &__img-1,
+    &__img-2,
+    &__img-3 {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__title {
+      font-size: 50px;
+      line-height: 0.9;
+    }
+
+    &__subtitle {
+      font-size: 50px;
+      line-height: 0.9;
+      margin-bottom: var(--space-md);
+    }
+
+    &__text,
+    &__text-2 {
+      font-size: 18px;
+      line-height: 1.55;
+    }
+  }
+
+  @include desktop {
+    margin: var(--space-2xl) var(--space-2xl);
+
+    &__intro {
+      width: 85%;
+      height: 65%;
+    }
+
+    &__title {
+      width: 110%;
+      word-spacing: 0.10rem;
+    }
+  }
+}

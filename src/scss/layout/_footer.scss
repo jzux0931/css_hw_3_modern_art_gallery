@@ -1,0 +1,111 @@
+@use "../abstracts" as *;
+
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--space-lg) var(--space-md);
+
+    &__title {
+        margin-bottom: var(--space-md);
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: var(--space-md);
+        line-height: 1.5;
+    }
+
+    &__social {
+        display: flex;
+        gap: var(--space-sm)
+    }
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-lg);
+
+        &__title {
+            width: 19%;
+            font-size: 27px;
+        }
+
+        &__text {
+            width: 50%;
+        }
+    }
+
+        @include desktop {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-lg);
+        padding: var(--space-lg) var(--space-2xl);
+
+        &__title {
+            width: 19%;
+            font-size: 27px;
+        }
+
+        &__text {
+            width: 40%;
+        }
+    }
+}
+
+.location-footer {
+    background-color: var(--color-gold);
+    padding: var(--space-lg) var(--space-md);
+    color: var(--color-dark);
+    
+    &__title {
+        margin-bottom: var(--space-md);
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: var(--space-md);
+        line-height: 1.5;
+    }
+
+    &__social {
+        display: flex;
+        gap: var(--space-sm);
+        
+        img {
+            filter: brightness(0) saturate(100%);
+        }
+    }
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-lg);
+
+        &__title {
+            width: 19%;
+            font-size: 27px;
+        }
+
+        &__text {
+            width: 40%;
+        }
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-lg);
+        padding: var(--space-lg) var(--space-2xl);
+
+        &__title {
+            width: 19%;
+            font-size: 27px;
+        }
+
+        &__text {
+            width: 40%;
+        }
+    }
+}
